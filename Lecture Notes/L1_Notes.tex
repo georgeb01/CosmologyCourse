@@ -1,0 +1,106 @@
+\documentclass[11pt]{article}
+\renewcommand{\baselinestretch}{1.05}
+\usepackage{amsmath,amsthm,verbatim,amssymb,amsfonts,amscd, graphicx}
+\usepackage{graphics}
+
+\topmargin0.0cm
+\headheight0.0cm
+\headsep0.0cm
+\oddsidemargin0.0cm
+\textheight23.0cm
+\textwidth16.5cm
+\footskip1.0cm
+\newcommand{\inchsign}{$^{\prime\prime}$}
+
+ \begin{document}
+ 
+\title{Lecture 1:\\Fundamental Observations of the Universe}
+\author{Dr. James Mullaney}
+\maketitle
+
+\section{An Introduction to Cosmology}
+The aim of this course is to provide you with an understanding of the Universe as an entity in itself. That is to say that the focus of the course is less on the {\it contents} of the Universe (e.g., stars, galaxies, plantes, people), but the Universe itself. In the first part of the course, we will explore how the Universe has expanded over cosmic time, and what dictates the rate of this expansion. Next, we will cover how astromers and cosmologists measure this expansion and place constraints on the parameters that describe our models of the Universe. Later, we will try to gain insights into the Dark Universe (dark matter and energy), before delving into the very earliest fractions of seconds of the Universe. Toward the end of the course, we will take a look at how the Universe has evolved from those first few moments to produce the huge variety of astronomical objects that we see today.
+
+There are five different sources of learning material for this course. Three of these I have prepared myself, one is provided by the person who previously delivered this course - Dr. Susan Cartwright, and the final one is the textbook ``Introduction to Cosmology'' by Barbara Ryden, published by Cambridge University Press. The material I have prepared is almost wholly derived from that textbook.
+
+The three types of learning material I have produced for the course are:
+\begin{itemize}
+\item Each lecture is accompanied by a set of typed notes. These are what I refer to when writing on the board and are thus written in note form (e.g., single sentence bullet points, equations etc.). There are no ``additional'' notes that I secretly keep to myself.
+\item Lecture slides. You will have access to all the lecture slides that I present throughout the course.
+\item Python Notebooks. Whenever I produce a plot (i.e., graph) or any data that appears in any of the lectures, I'll make the Python code I used to produce that plot/data available to you via github:
+
+\noindent
+\url{https://github.com/jrmullaney/CosmologyCourse}
+
+Personally, I find that difficult concepts can sometimes be easier to understand when written in cold, hard python code.
+\end{itemize}
+
+Dr. Cartwright produced a huge amount of material throughout her tenure delivering this course. Much of this material is still relevant to the course and is available at:
+
+\noindent
+\url{http://www.hep.shef.ac.uk/cartwright/phy306/index.html}
+
+\noindent
+I strongly recommend you utilise this material. Simply having the same concepts presented in two different styles can really help with understanding.
+
+Finally - a note on the capitalisation of universe. Throughout the course, you'll see that I sometimes spell ``universe'' with a lower case u, and sometimes with an upper case U. This is not because I'm being sloppy and inconsistent with my grammar (well, I hope not most of the time!). Instead, it's because we'll consider both {\bf our} Universe (i.e., the one real Universe in which we reside) and {\bf model} universes. The first is a proper noun (and thus starts with a capital letter), whereas the second is a common noun. Think of it a bit like God and god. The first would be the deity one chooses to believe in (e.g., the one God of the Abrahamic religions), whereas the second refers to the general concept of god(s) (e.g., we speak today of the gods of ancient Egypt).
+
+\section{Early history and evidence for a non-static Universe}
+\begin{itemize}
+\item Throughout history, various religions have offered their own explanation for what we'd now call the Universe.
+\item Some of these involve a beginning to the Universe. For example, the ``In the beginning, God created heaven and the earth'' of the Bible.
+\item However, another possibility is that the Universe has been around for ever.
+\item And first impressions suggest that the Universe is static and non-evolving.
+\item The first documented, logically-sound argument against a non-infinite (in time), evolving Universe is Olber's Paradox.
+\end{itemize}
+
+
+\subsection{Olber's paradox}
+Olber's paradox concerns the question of why the sky is dark. At
+first, it may seem obvious why the sky is dark. However, if the
+Universe is infinite in both size and age (and contains a roughly
+constant density of stars/galaxies), then there's a scientifically robust proof that the night sky should, in fact, be bright.
+
+\begin{itemize}
+  \item Imagine looking out into an infinite universe that is filled with stars at some average density (i.e., $n_\ast$ stars per unit volume).
+  \item Eventually, because this universe is infinite, every line of sight will encounter a star.
+  \item We can calculate the typical distance before our line of sight encounters a star - we'll denote this distance $\lambda$.
+  \item To do this, imagine a cyclinder of length $\lambda$ and radius the same of that of a typical star $R_\ast$. The volume of this cylinder is:
+  \begin{equation}
+    V = \lambda\pi R_\ast^2
+  \end{equation}
+  \item The number of stars within this cyclinder is:
+  \begin{equation}
+    N_\ast = n_\ast\lambda\pi R_\ast^2
+  \end{equation}
+  \item To calculate the typical distance until our line of sight encouters one star, we set $N\ast=1$, giving:
+  \begin{equation}
+  \lambda = \frac{1}{n_\ast\pi R^2}
+  \end{equation}
+  \item In the current Universe, $n_\ast\sim10^9~{\rm Mpc^{-3}}$ and $R\ast$ is typically about $7\times10^8~{\rm m}$, giving $\lambda\sim10^{18}~{\rm Mpc}$.
+  \item So our line of sight would typically extend to $10^{18}~{\rm Mpc}$ before encountering a star.
+  \item This is much larger than the size of the observable Universe, but it is still a finite number.
+  \item In an infinite (in age and size) universe, our line of sight {\it would} eventually extend to this kind of distance before hitting a star.
+  \item If a star is at distance $\lambda$, then it's angular area relative to the area of the whole sky is:
+  \begin{equation}
+    \Omega_\ast = \frac{\pi R_\ast^2}{4\pi \lambda^2}
+  \end{equation}
+  and the flux we measure is:
+  \begin{equation}
+    f_\ast = \frac{L_\ast}{4\pi \lambda^2}
+  \end{equation}
+  where $L_\ast$ is the star's luminosity.
+  \item Meaning its surface brightness is:
+  \begin{equation}
+  \Sigma = \frac{f}{\Omega}=\frac{L_\ast}{4\pi \lambda^2}\frac{4\lambda^2}{R_\ast^2} = \frac{L_\ast}{\pi R_2}
+  \end{equation}
+  \item The surface brightness is independent of $\lambda$, the distance to the star.
+  \item Since every line of sight eventually hits a star, this means that in an infinite (in age and size) universe, the surface brightness of every part of the sky will be equal to the surface brightness of a typical star (such as our Sun)!
+  \item There is no trickery here, meaning that our assumption of a static, infinite (in age and space) universe is incorrect.
+  \item It turns out that the main reason for Olber's Paradox is that the real Universe is not infinite in age, meaning that the light from the most distant stars has not had time to reach us yet.
+\end{itemize}
+
+
+
+
+\end{document}
