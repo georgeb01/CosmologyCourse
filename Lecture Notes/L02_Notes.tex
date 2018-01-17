@@ -1,0 +1,155 @@
+\documentclass[11pt]{article}
+\renewcommand{\baselinestretch}{1.05}
+\usepackage{amsmath,amsthm,verbatim,amssymb,amsfonts,amscd, graphicx}
+\usepackage{graphics}
+
+\topmargin0.0cm
+\headheight0.0cm
+\headsep0.0cm
+\oddsidemargin0.0cm
+\textheight23.0cm
+\textwidth16.5cm
+\footskip1.0cm
+\newcommand{\inchsign}{$^{\prime\prime}$}
+
+ \begin{document}
+ 
+\title{Lecture 2:\\The Shape of the Universe and Cosmological Distances}
+\author{Dr. James Mullaney}
+\maketitle
+
+\section{Understanding Gravity}
+{\bf Slide 2}
+\begin{itemize}
+\item The only signiciant force acting on large (i.e., Universe-sized) scales is gravity.
+\item Therefore to understand how the Universe has evolved, we must first have a good understanding of gravity.
+\item Newton was the first to attempt this. His laws are still a very good approximation for most circumstances.
+\item In Newton's laws, the strength of gravitational force between two objects is dictated by a property known as their ``gravitational mass'', $m_g$.
+\item This force acts on an object's ``inertial mass'', $m_i$, telling that object how to move.
+\item It just so happens that, to within the errors of our best measurements, $m_g = m_i$. This is known as the ``equivalence principle''.
+\item The equivalence principle implies that there is a unique acceleration due to gravity everywhere in the universe that is independent of $m$.
+\item But Newton's theories didn't really tell us what gravity actually is.
+\item {\bf Slide 3} Based on the Equivalence Principle, Einstein realised that there was no experiment that could tell the difference between constant acceleration and gravity.
+\item {\bf Slide 4} This means that a beam of light behaves the same within a gravitational field as it does within a rocket undergoing constant acceleration.
+\item The beam of light will appear to bend.
+\item {\bf Slide 5} But Fermat's theorem states that light travels via the shortest possible route, which Einstein knew as via straight lines in {\it spacetime}.
+\item So if the presence of mass causes light to {\it appear} to travel through a curve, but is actually travelling in straight lines in spacetime, it must mean that {\it spacetime is curved} by the presence of mass.
+\item Therefore, spacetime {\it must be curved}.
+
+\end{itemize}
+
+\section{Describing curvature}
+\begin{itemize}
+\item On realising that spacetime -- the very fabric of the Universe -- was curved, the few early cosmologists started investigating means of describing curvature.
+\item For our purposes, this is usually done in terms of measuring distances between points on a curved (or flat) surface.
+\item Isotropic, homogeneous objects (i.e., like the Universe) can only have three different types of curvature (and one of them isn't even curved):
+\begin{itemize}
+\item Flat
+\item Positively curved everywhere - like a sphere.
+\item Negativelty curved everywhere - like a saddle-shape.
+\end{itemize}
+\item {\bf Slide 6} shows how to calculate the distance between two points on each of these different curved 2D surfaces.
+\item But for curved spacetime, we need to consider distances between ``events'' in four dimensions.
+\item {\bf Slide 7} The equation for calculating distances between two events is known as the {\bf Robertson-Walker metric}.
+\end{itemize}
+
+\section{What is ``distance''?}
+\begin{itemize}
+\item Before going further, we should define what we mean by ``distance'' within an expanding or contracting Universe, especially when the messenger -- light -- can take a very long time to reach us.
+\item The first -- and most important -- distance we'll consider is the {\it Proper Distance}.
+\item Proper distance is the distance you would measure with a hypothetical, infintely long, inflexible ruler.
+\item As we'll see later in the course, there are other types of distance that differ from proper distance.
+\item {\bf Slide 8} The {\it current} Proper Distance to a galaxy is the distance to that galaxy {\it right now, at this instant}. This is {\it not} the distance at which the galaxy {\it ``appears''} to be since, in an expanding universe, the galaxy has moved further away in the intervening period between when the light was emitted and the time when we observe it.
+\item {\bf Slide 9} The current proper distance to a galaxy is the integral of the Robertson-Walker metric.
+\item Because it is at {\it this instance}, then $dt=0$, and because we're measuring distance along the radial direction $d\theta=0$ and $d\phi=0$.
+\item The RW metric then reduces to:
+\begin{equation}
+ds = a(t)dr
+\end{equation}
+\item And integrating over $r$ gives the proper distance:
+\begin{equation}
+d_p = a(t)\int_0^r dr = a(t)r
+\end{equation}
+\end{itemize}
+
+\section{Redshifts and distances}
+\begin{itemize}
+\item On cosmological scales, pretty much the only things we can measure for a galaxy are its flux (maybe in different filters), angular size, and redshift.
+\item This would present serious difficulties for measuring cosmological distances if it weren't for the fact that redshift is directly related to the scale factor.
+\item An interesting property of light is that it travels along the null geodesic. In other words, it travels along lines of {\it constant spacetime}.
+\item This means that, for light, $ds = 0$.
+\item Therefore, for light travelling along the radial direction (i.e., $d\theta=0$ and $d\phi=0$), the RW metrtic reduces to:
+\begin{equation}
+    0 = -c^2dt^2+a(t)^2dr^2
+\end{equation}
+or
+\begin{equation}
+    \label{cdt}
+    \frac{cdt}{a(t)}=dr
+\end{equation}
+\item To see how this can be related to redshift, we'll consider a single photon emitted by a galaxy at time $t_{\rm em}$ and observed at time $t_{\rm ob}$.
+\item Integrating both sides of Eq. \ref{cdt} between $t_{\rm em}$ and $t_{\rm ob}$ gives:
+\begin{equation}
+    \label{cint1}
+    c\int_{t_{\rm em}}^{t_{\rm ob}}\frac{dt}{a(t)}=\int_0^r dr=r
+\end{equation}
+since in the intervening time, the light has travelled across the distance $r$ in comoving coordinates.
+\item The next crest of the photon's wavelength is emitted at $t_{\rm em}+\lambda_{\rm em}/c$ and observed at $t_{\rm ob}+\lambda_{\rm ob}/c$, giving:
+\begin{equation}
+    \label{cint2}
+    c\int_{t_{\rm em}+\lambda_{\rm em}/c}^{t_{\rm ob}+\lambda_{\rm ob}/c}\frac{dt}{a(t)}=\int_0^r dr=r
+\end{equation}
+\item Since the RHS of both Eqs. \ref{cint1} and \ref{cint2} are the same, we can say:
+\begin{equation}
+    \label{intt}
+    \int_{t_{\rm em}+\lambda_{\rm em}/c}^{t_{\rm ob}+\lambda_{\rm ob}/c}\frac{dt}{a(t)}=\int_{t_{\rm em}}^{t_{\rm ob}}\frac{cdt}{a(t)}
+\end{equation}
+where the $c$s have been cancelled. 
+\item From both sides, we then subtract:
+\begin{equation}
+    \int_{t_{\rm em}+\lambda_{\rm em}/c}^{t_{\rm ob}}\frac{dt}{a(t)}
+\end{equation}
+which, for the LHS of Eq. \ref{intt}, corresponds to:
+\begin{equation}
+    \left.\int\frac{dt}{a(t)} \right|_{t_{\rm ob}+\lambda_{\rm ob}/c} - \left.\int\frac{dt}{a(t)} \right|_{t_{\rm em}+\lambda_{\rm em}/c} - 
+    \left.\int\frac{dt}{a(t)} \right|_{t_{\rm ob}} +
+    \left.\int\frac{dt}{a(t)} \right|_{t_{\rm em}+\lambda_{\rm em}/c}
+\end{equation}
+with the second and fourth term cancelling.
+\item Doing the same for the RHS of Eq. \ref{intt}, it then becomes:
+\begin{equation}
+    \int^{t_{\rm em}+\lambda_{\rm em}/c}_{t_{\rm em}}\frac{dt}{a(t)}=
+    \int_{t_{\rm ob}}^{t_{\rm ob}+\lambda_{\rm ob}/c}\frac{dt}{a(t)}
+\end{equation}    
+
+\item Over the time between the emission of the first and the second crest of the photon's wave, $a(t)$ is effectively constant, so can come out of both integrals:
+\begin{equation}
+    \frac{1}{a(t_{\rm em})}\int^{t_{\rm em}+\lambda_{\rm em}/c}_{t_{\rm em}}dt=\frac{1}{a(t_{\rm ob})}\int_{t_{\rm ob}}^{t_{\rm ob}+\lambda_{\rm ob}/c}dt
+\end{equation}
+
+\item Performing the integral then gives:
+\begin{equation}
+    \frac{1}{a(t_{\rm em})}\left[t_{\rm em}+\lambda_{\rm em}/c - t_{\rm em}\right]=\frac{1}{a(t_{\rm ob})}\left[t_{\rm ob}+\lambda_{\rm ob}/c - t_{\rm ob}\right]
+\end{equation}
+
+
+\item Cancelling $t_{\rm em}$, $t_{\rm ob}$, and $c$ gives:  
+\begin{equation}
+    \frac{\lambda_{\rm em}}{a(t_{\rm em})} = \frac{\lambda_{\rm ob}}{a(t_{\rm ob})}
+\end{equation}
+\item or
+\begin{equation}
+    \frac{a(t_{\rm ob})}{a(t_{\rm em})} = \frac{\lambda_{\rm ob}}{\lambda_{\rm em}}
+\end{equation}
+\item and using 
+\begin{equation}
+    z = \frac{\lambda_{\rm ob}-\lambda_{\rm em}}{\lambda_{\rm em}}
+\end{equation}
+gives
+\begin{equation}
+    \frac{a(t_{\rm ob})}{a(t_{\rm em})} = \frac{1}{a(t_{\rm em})} = 1+z
+\end{equation}
+\item Meaning that by measuring the redshift of a galaxy immediately tells us the relative scale factor of the Universe when the light from that galaxy was emitted.
+\item This is the {\bf Second Important} equation of the course.
+\end{itemize}
+\end{document}
