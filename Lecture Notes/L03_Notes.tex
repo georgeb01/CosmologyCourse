@@ -1,0 +1,57 @@
+\documentclass[11pt]{article}
+\renewcommand{\baselinestretch}{1.05}
+\usepackage{amsmath,amsthm,verbatim,amssymb,amsfonts,amscd, graphicx}
+\usepackage{graphics}
+
+\topmargin0.0cm
+\headheight0.0cm
+\headsep0.0cm
+\oddsidemargin0.0cm
+\textheight23.0cm
+\textwidth16.5cm
+\footskip1.0cm
+\newcommand{\inchsign}{$^{\prime\prime}$}
+
+ \begin{document}
+ 
+\title{Lecture 3:\\The Friedmann Equation}
+\author{Dr. James Mullaney}
+\maketitle
+
+\section{The Robertson Walker metric}
+{\bf Slide 2}
+\begin{itemize}
+\item Saw in lecture 2 that an isotropic, homogeneous Universe can be fully described by just three numbers: $\kappa$, $R_0$, $a(t)$.
+\item $a(t)$ is paricularly important: it tells us how the Universe expands and contracts over time.
+\item $a(t)$ also enables us to relate redshifts (which are easily measured) to distances (which are much more difficult to measure).
+\item However, let's first focus on curvature, described by $\kappa$ and $R_0$.
+\end{itemize}
+\subsection{What is curvature in the context of a universe?}
+{\bf Slide 3}
+\begin{itemize}
+\item Curvature in a universe would manifest itself in terms of the perceived sizes of distant objects.
+\item The {\it perceived} size of an object is the angular size it subtends.
+\item As such, it is convenient to think in terms of a triangle, with the object at one end, and the angular size at the other.
+\item In a flat universe, the angles of this triangle all add up to 180 degrees, and the objects subtends the angle that we have come to expect for flat geometry.
+\item In a negatively curved universe, the interior angles of the triangle add up to less than 180 degrees, and the object subtends a {\it smaller} angle that we would expect. This would be witnessed as distant galaxies appearing disproportionately smaller than nearby ones.
+\item By contrast, in a negatively curved universe, the interior angles of the triangle add up to more than 180 degrees, and the object subtends a {\it larger} angle that we would expect. This would be witnessed as distant galaxies appearing disproportionately larger than nearby ones.
+\item Such disproportionately large or small distant galaxies are not seen when we look to higher and higher distances (i.e., redshifts), so we can conclude that {\it if} the Universe is curved, then its radius of curvature, $R_0$ is much larger than the size of the observable Universe.
+
+\end{itemize}
+
+\section{Relating curvature to content}
+\begin{itemize}
+\item General relativity tells us that a universe's curvature is dictated by its content (whether mass or energy, since they are one and the same thing in relativity).
+\item The {\it Field Equation} links the two - it tells spacetime ($G_{\mu,\nu}$) how to curve in the presence of stress-energy ($T_{\mu, \nu}$).
+\item Unfortunately, both $G_{\mu,\nu}$ and $T_{\mu, \nu}$ are $4\times4$ tensors (i.e., matrices), and the equation as a whole represents ten non-linear second-order differential equations!
+\item Thus, in general, it can be extremely difficult to solve for $G_{\mu,\nu}$.
+{\bf Slide 5}
+\item However, on large scales, we can make some sweeping simplifications.
+\item On very large scales, we can ignore the ``clumpy'' nature of the Universe and instead describe it as being filled with a uniform (i.e., homogeneous), isotropic gas or pressure $P(t)$ and (energy) density $\varepsilon(t)$.
+\item In such a case, then $T_{\mu,\nu}$ only depents on $P(t)$ and $\varepsilon(t)$, and the metric is given by the Robertson Walker metric.
+\item Our goal, therefore, is simply to relate $a(t)$, $\kappa$, and $R_0$ to $P(t)$ and $\varepsilon(t)$.
+\end{itemize}
+
+\section{The Friedmann Equation}
+
+\end{document}
