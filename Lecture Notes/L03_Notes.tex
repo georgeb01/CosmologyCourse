@@ -53,5 +53,67 @@
 \end{itemize}
 
 \section{The Friedmann Equation}
-
+\begin{itemize}
+\item To relate $a(t)$, $\kappa$, and $R_0$ to $P(t)$ and $\varepsilon(t)$, we'll consider the gravitational influence of the aforementioned perfect gas.
+\item The full General Relativistic approach to this is beyond the scope of this course, so we'll instead consider the Newtonian equivalent, which gives a good sense of the physics involved.
+\item We'll start with considering a large sphere of the universe, containing a perfect gas with energy density $\varepsilon(t)$.
+\item Since spacetime itself is affected by energy density, the surface of this sphere will expand or contract according to the gravitaional influence of the perfect gas.
+\item This expnasion/contraction is given by Newton's law of gravitation:
+\begin{equation}
+\frac{d^2R_s}{dt^2} = -\frac{GM_s}{R_s(t)^2}
+\end{equation}
+\item To solve this to get $R_s(t)$ is a bit tricky, since $R_s$ is a function of time, so we can't immediately put all $R_s$ terms on side and all $t$ terms on the other.
+\item So, we have to be a bit clever. First, we'll multiply both sides by $\frac{dR_s}{dt}$:
+\begin{equation}
+    \label{d2Rs}
+    \frac{d^2R_s}{dt^2}\frac{dR_s}{dt} = -\frac{GM_s}{R_s(t)^2}\frac{dR_s}{dt}
+\end{equation}
+\item How has that helped us to integrate this function to solve for $R_s$?
+\item First, for the LHS of Eq. \ref{d2Rs}, consider the product rule:
+\begin{equation}
+\label{ddx}
+    \frac{d}{dx}\left(\frac{dy}{dx}\frac{dy}{dx}\right) = \frac{dy}{dx}\frac{d^2y}{dx^2}+\frac{dy}{dx}\frac{d^2y}{dx^2} = 2\frac{dy}{dx}\frac{d^2y}{dx^2}
+\end{equation}
+\item By comparing the RHS of Eq. \ref{ddx} to the LHS of Eq. \ref{d2Rs}, we can see that:
+\begin{equation}
+\int\frac{d^2R_s}{dt^2}\frac{dR_s}{dt} dt = \frac{1}{2}\frac{dR_s}{dt}\frac{dR_s}{dt} + C = \frac{1}{2}\left(\frac{dR_s}{dt}\right)^2 + C
+\end{equation}
+\item So now, Eq. \ref{d2Rs} has become:
+\begin{equation}
+    \label{f12}
+    \frac{1}{2}\left(\frac{dR_s}{dt}\right)^2 + C = -\int\frac{GM_s}{R_s^2}\frac{dR_s}{dt}dt
+\end{equation}
+where $C$ is a constant of integration.
+\item For the RHS of Eq. \ref{f12}, we consider the chain rule:
+\begin{equation}
+\frac{d\frac{GM_s}{R_s}}{dt} = \frac{d\frac{GM_s}{R_s}}{dR_s}\frac{dR_s}{dt} = -\frac{GM_s}{R_s^2}\frac{dR_s}{dt}
+\end{equation}
+\item Meaning:
+\begin{equation}
+-\int\frac{GM_s}{R_s^2}\frac{dR_s}{dt} dt = \int \frac{d\frac{GM_s}{R_s}}{dt}dt = \frac{GM_s}{R_s} + U
+\end{equation}
+where $U$ is a constant of integration, which we can combine with $C$ to give:
+\begin{equation}
+    \frac{1}{2}\left(\frac{dR_s}{dt}\right)^2 = \frac{GM_s}{R_s} + U
+\end{equation}
+\item Since the mass, $M_s$, within the sphere is constant (there's no net flow in or out of the sphere), we can say:
+\begin{equation}
+M_s = \frac{4}{3}\pi R_s(t)^3\rho(t)
+\end{equation}
+and we can also say that $R_s = a(t)r_s$, where $a(t)$ is the scale factor and $r$ is the radius of the sphere in spherical co-moving coordinates.
+\item Substituting for $M_s$ and $R_s$ (and since $r_s$ is constant with time) gives:
+\begin{equation}
+\frac{1}{2}\left(r_s\dot{a}\right)^2 = \frac{4}{3}\pi\frac{Ga(t)^3r_s^3}{a(t)r_s} + U
+\end{equation}
+\item where $\dot{a} = da/dt$. When rearranged, this becomes:
+\begin{equation}
+\left(\frac{\dot{a}}{a}\right)^2 = \frac{8\pi G}{3}\rho(t) + \frac{2U}{r_s^2}\frac{1}{a(t)^2}
+\end{equation}
+\item which is the Newtonian form of the Friedmann Equation.
+\item By contrast, the full GR Friedmann equation is given by:
+\begin{equation}
+\left(\frac{\dot{a}}{a}\right)^2 = \frac{8\pi G}{3}\frac{\varepsilon(t)}{c^2} + \frac{\kappa c^2}{R_0^2}\frac{1}{a(t)^2}    
+\end{equation}
+\item There are clear similarities between the two. Notice especially that mass density, $\rho(t)$, has become energy density, $\varepsilon(t)/c^2$, in the relativistic form of the Friedmann Equation. This is a direct result of the equivalence of mass and energy within relativity: $E = mc^2$.
+\end{itemize}
 \end{document}
