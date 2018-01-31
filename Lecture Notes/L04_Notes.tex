@@ -1,0 +1,167 @@
+\documentclass[11pt]{article}
+\renewcommand{\baselinestretch}{1.05}
+\usepackage{amsmath,amsthm,verbatim,amssymb,amsfonts,amscd, graphicx}
+\usepackage{graphics}
+
+\topmargin0.0cm
+\headheight0.0cm
+\headsep0.0cm
+\oddsidemargin0.0cm
+\textheight23.0cm
+\textwidth16.5cm
+\footskip1.0cm
+\newcommand{\inchsign}{$^{\prime\prime}$}
+
+ \begin{document}
+ 
+\title{Lecture 04:\\Solving the Friedmann Equation: Thermodynamics and the Equation of State}
+\author{Dr. James Mullaney}
+\maketitle
+
+\section{The critical density}
+\begin{itemize}
+\item In the previous lecture, we saw (well, at least in Newtonian terms) how we could relate the expansion/contraction of the universe -- parameterised as a(t) -- to the energy density ($\varepsilon$) and curvature of the universe ($\kappa$).
+\item The Friedmann Equation holds true at all times throughout the universe.
+\item Since the RHS of the FE allows for a time-dependency via $a(t)$ and $\varepsilon(t)$, it must mean that the LHS may also be time-dependent.
+\item And, in general, it is (although, later we'll see one example model universe where it is not).
+\item As such, the Friedmann Equation tells us that the Hubble parameter is not a constant.
+\item But -- and rather confusingly -- we can write the Friedmann Equation in terms of today's parameters to obtain an expression for the Hubble constant, $H_0$.
+\item All we need to do is specify: $t=t_0$, $a(t)=a(t_0)=1$, $\varepsilon(t)=\varepsilon(t_0)=\varepsilon_0$ and $H(t)=H(t_0)=H_0$:
+\begin{equation}
+H_0^2 = \left(\frac{\dot{a}}{a}\right)^2_{t=t_0} = \frac{8\pi G}{3c^2}\varepsilon_0 - \frac{\kappa c^2}{R_0^2}
+\end{equation}
+
+\item In either a flat $\kappa=0$ universe we know that the second term on the RHS of the F.E. is zero.
+\item So, we can therefore say:
+\begin{equation}
+H(t)^2 = \frac{8\pi G}{3c^2}\varepsilon
+\end{equation}
+\item Which, rearranged gives:
+\begin{equation}
+\varepsilon(t) = \frac{3c^2}{8\pi G}H(t)^2
+\end{equation}    
+\item This therefore represents, for a given value of $H$, the energy density that would force the universe to be flat.
+\item An energy density above that critical value would mean $\kappa=1$ in order for the FE to balance.
+\item An energy density below that critical value would mean $\kappa=-1$ in order for the FE to balance.
+\item We therefore call this the {\it critical density}, $\varepsilon_c$, i.e.,
+\begin{equation}
+    \label{varep}
+    \varepsilon_c(t) = \frac{3c^2}{8\pi G}H(t)^2
+\end{equation}     
+\item As we'll see, it's often more convenient to think of energy densities as a fraction of this critical density (especially for the real Universe, since it appears flat):
+\begin{equation}
+    \Omega(t) = \frac{\varepsilon(t)}{\varepsilon_c(t)}
+\end{equation}    
+
+\item But, lets consider what happens if we put $\varepsilon(t)=\varepsilon_c(t)\Omega(t)$ back into the FE:
+\begin{equation}
+H(t)^2 = \frac{8\pi G}{3c^2}\Omega(t)\epsilon_c(t)-\frac{\kappa c^2}{R_0^2}\frac{1}{a(t)^2}
+\end{equation}
+\item Substituting \ref{varep} for $\varepsilon_c$:
+\begin{equation}
+    H(t)^2 = \frac{8\pi G}{3c^2}\Omega(t)\frac{3c^2}{8\pi G}H(t)^2-\frac{\kappa c^2}{R_0}\frac{1}{a(t)^2}
+\end{equation}
+\item Cancelling, and taking the first term on the LHS to the RHS:
+\begin{equation}
+    H(t)^2 (1 - \Omega(t)) = -\frac{\kappa c^2}{R_0^2}\frac{1}{a(t)^2}
+\end{equation}
+\item Giving:
+\begin{equation}
+    1 - \Omega(t) = -\frac{\kappa c^2}{R_0^2}\frac{1}{H(t)^2a(t)^2}
+\end{equation}
+\item Look at all those squared values that can't change sign. And $R_0$ MUST be positive (what's a negative distance in spherical coordinates?). And $\kappa$ is time-independent.
+\item This means that $1-\Omega(t)$ can {\it never} change sign.
+\item If the universe starts out with a density above the critical density, it will remain that way for ever.
+\item If the universe starts out with a density below the critical density, it will remain that way for ever.
+\item If the universe starts out with a density equal to the critical density, it will remain that way for ever.
+\item And today, since $a(t_0)=1$:
+\begin{equation}
+    1 - \Omega(t_0) = -\frac{\kappa c^2}{R_0^2}\frac{1}{H(t)^2}
+\end{equation}
+\item So, if we can measure $\Omega(t_0)$, we'll know whether the universe is open, closed or flat. If we can also measure $H_0$, we'll also know $R_0$.
+
+\end{itemize}
+
+\section{Solving the Friedmann Equation}
+\subsection{The Fluid Equation}
+\begin{itemize}
+\item Got the FE, but we're missing some key ingredients before we can solve it to get an expression for $a(t)$ -- an expression that describes the expansion or constraction of the universe.
+\item In particular, we're missing an expression for $\varepsilon(t)$ - how the energy density of the universe changes with time.
+\item To find an expression for $\varepsilon(t)$, we're going to turn to Thermodynamics.
+\item This seems reasonable, since Thermodynamics is all about the flow of energy.
+\item We'll start with the first law of thermodynamics:
+\begin{equation}
+\label{dQ}
+    dQ = dE + PdV
+\end{equation}
+which basically states that if there is heat flow $dQ$ into a volume $dV$, either the thermal energy $dE$ in that volume goes up, the volume increases, the pressure increases, or any combination of the three.
+\item In an homogeous, isotropic universe, there is no net heat flow, otherwise there's either be a spacial place (energy flowing from one point to another) or a spacial direction (along the path of the net flow).
+\item And, if we also divide Eq. \ref{dQ} by $dt$, we get:
+\begin{equation}
+\label{zero}
+    0 = \dot{E}+P\dot{V}
+\end{equation} 
+\item Let's consider a huge sphere of the universe with radius $R$, so big that we can ignore any clumpiness. This sphere is filled with an extremely tenous gas with density equal to the average density of the universe (as we'll see later in the course, this is a pretty reasonable approximation, since most of the matter in the Universe is extremely tenuous).
+\begin{equation}
+V = \frac{4}{3}\pi R^3
+\end{equation}
+\item We can, or course, describe $R$ in terms of the scale factor, $R=a(t)r$:
+\begin{equation}
+    \label{Vt}
+    V(t) = \frac{4}{3}\pi a(t)^3r^3
+\end{equation}
+\item Differentiate to get $\dot{V}$, using the chain rule to differentiate $a(t)$, i.e., :
+\begin{equation}
+    \frac{d(a^3)}{dt} = \frac{d(a^3)}{da}\frac{da}{dt} = 3a^2\dot{a}
+\end{equation}
+giving:
+\begin{equation}
+    \dot{V}(t) = \frac{4}{3}\pi r^3 3a(t)^2\dot{a}
+\end{equation}
+\item We can substitute Eq. \ref{Vt} back into the above, in the form of $V(t)/a^3 = 4/3 \pi r^3$ to get:
+\begin{equation}
+    \label{dotVt}
+    \dot{V}(t) = \frac{V(t)}{a(t)^3} 3a(t)^2\dot{a} = V(t) 3\frac{\dot{a}}{a}
+\end{equation}
+\item Now, we'll consider the energy part of Eq. \ref{zero}. We can express the total energy content of the sphere as the energy density multiplied by the volume of the sphere:
+\begin{equation}
+    E(t) = V(t)\varepsilon(t)
+\end{equation}
+\item Use the product rule to differentiate:
+\begin{equation}
+    \frac{dE}{dt} = V(t)\frac{d\varepsilon(t)}{dt} + \varepsilon(t)\frac{dV(t)}{dt}
+\end{equation}
+\item And we can substitute Eq. \ref{dotVt} in for the final term to give:
+\begin{equation}
+    \label{dotE}
+    \dot{E} = V(t)\left(\dot{\varepsilon} + 3\varepsilon\frac{\dot{a}}{a}\right)
+\end{equation}
+\item Putting Eqs. \ref{dotVt} \& \ref{dotE} into Eq. \ref{zero} gives: 
+\begin{equation}
+    0 = V(t)\left(\dot{\varepsilon} + 3\varepsilon\frac{\dot{a}}{a}\right) + 3PV(t)\frac{\dot{a}}{a}
+\end{equation}
+\item or, since $V(t)\ne 0$:
+\begin{equation}
+    0 = \dot{\varepsilon} + 3\frac{\dot{a}}{a}\left(\varepsilon + 3P\right)
+\end{equation}
+\item Which is called the {\bf Fluid Equation}.
+\end{itemize}
+
+\subsection{Equations of State}
+\begin{itemize}
+\item Great - we've created an expression for $\varepsilon(t)$ by introducing a new unknown - $P$!
+\item What we need now is an expression for $P$ in terms of the other parameters in the Friedmann Equation.
+\item The easiest way to do this is via an Equation of State, which relates pressure to energy density.
+\item Equations of state can be really complicated, but in the tenuous, perfect gas conditions of the large-scale universe, they're really straightforward.
+\item Indeed, for a perfect gas they simply take the form:
+\begin{equation}
+P = \varepsilon\omega
+\end{equation}
+\item where $\omega$ is a fixed constant for a given type of energy.
+\item For a non-relativitic gas, $\omega = \langle\frac{v^2}{3c^2}\rangle$, which is effectively 0.
+\item For a relativitic gas (e.g., of photons), $\omega = \frac{c^2}{3c^2} = 1/3$.
+\item And for a Dark Energy, we effectively get a negative pressure, meaning $\omega<-1/3$
+
+\end{itemize}
+    
+\end{document}
