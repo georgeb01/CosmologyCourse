@@ -91,4 +91,80 @@ meaning $B=\vep{_{i,0}}$, and
 \item The second (i.e., radiation) at first doesn't makes sense. Why would the energy density of photons decrease faster that that due to volume dilution? It's because as well as volume dilution, the wavelengths of the photons expand as the universe expands, meaning each indivual photon's energy also falls as the scale factor increases (due to $E=hf$).
 \item But the last one (i.e., Dark Energy) makes least sense of all -- the energy density of Dark Energy is constant with respect to the scale factor. This means that the Dark Energy density does not get diluted as the universe expands. Each ``new'' cubic meter of the universe is ``produced'' with its own allocation of Dark Energy!
 \end{itemize}
+
+\section{Solving our first model universe:\\
+A universe containing nothing!}
+
+\begin{itemize}
+\item So, we've got everything we need to determine how the universe expands or contracts with time (encapsulated in $a(t)$) given a set of energy densities, \vep{(t)}.
+\item Doing this for the real Universe involves solving:
+\begin{equation}
+\int_0^a\frac{da}{\left[\Omega_{p,0}/a^2 + \Omega_{m,0}/a + \Omega_{d,0}a^2+(1-\Omega_0)\right]^{1/2}} = H_0t
+\end{equation}
+\item But this is too tricky for our first attempt at a universe (indeed, it can't be solved analytically), so we'll desmonstrate the principles using something much simpler...
+\item A model universe containing no energy density.
+\item In this case $\vep(t)=0$, meaning the F.E. is:
+\begin{equation}
+\label{fracdot}
+    \frac{\dot{a}}{a} = \sqrt{\frac{-\kappa c^2}{R_0}\frac{1}{a^2}}
+\end{equation}
+\item Clearly, the flat, $\kappa=0$ solution is trivial, with a solution of $\dot{a}=0$. This would be an entirely static, infinite-age universe, neither expanding nor contracting.
+\item But, more interestingly are the non-flat empty universes, where $\kappa\ne0$.
+\item The positively curved solution is unphysical, since it give an imaginary expression for $\dot{a}$.
+\item But the negatively curved, $\kappa=-1$ solution is viable. Cancelling the $a^2$ on both sides of Eq. \ref{fracdot}, and taking $\kappa=-1$ gives:
+\begin{equation}
+\frac{da}{dt} = \pm\frac{c}{R_0}
+\end{equation}    
+\item Integrating both sides, and taking the postive solution gives:
+\begin{equation}
+\label{at}
+    a(t) = \frac{ct}{R_0}
+\end{equation}    
+\item Using the definition that $t_0$ corresponds to {\it now}, and $a(t_0)=1$, we get:
+\begin{equation}
+1 = \frac{ct_0}{R_0}
+\end{equation}    
+or
+\begin{equation}
+    t_0 = \frac{R_0}{c}
+\end{equation}    
+\item And substituting back into Eq. \ref{at} gives:
+\begin{equation}
+    a(t) = \frac{t}{t_0}
+\end{equation}    
+\item And, since $H_0=\dot{a}$ (again, because $a=1$ when evaluated at $t_0$), then $H_0=1/t_0$.
+\item Since the rate of expansion is constant (there's no energy density to either speed up or slow down the expansion), the age of the univerese is {\it exactly} the inverse of the Hubble constant.
+\subsection{From $a(t)$ to proper distances}
+\item With an expression for $a(t)$, we can now attempt to determine the current proper distance, $d_p(t_{\rm ob})$,  between two points in this empty universe using (last seen in Lecture 2):
+\begin{equation}
+d_p(t_{\rm ob}) = c\int_{t_{\rm em}}^{t_{\rm ob}} \frac{dt}{a(t)}
+\end{equation}
+\item Substituting our expression for $a(t)$ into the above gives:
+\begin{equation}
+    d_p(t_{\rm ob}) = ct_0\int_{t_{\rm em}}^{t_{\rm ob}}\frac{dt}{t} = ct_0(\rm ln(t_{\rm ob})-ln(t_{\rm em})) = ct_0ln\left(\frac{t_{\rm ob}}{t_{\rm em}}\right)
+\end{equation}
+\item But, taking $t_{\rm ob}=t_0$ (i.e., we're observing {\it now}), and $a(t_{\rm em})=t_{\rm em}/t_0$, we get:
+\begin{equation}
+    d_p(t_{\rm ob}) = ct_0{\rm ln}\left(\frac{1}{a(t_{\rm em})}\right)
+\end{equation} 
+\item However, it's quite tricky to measure $a(t_{\rm em})$ directly, so instead we use the relation:
+\begin{equation}
+    \frac{1}{a(t_{\rm em})} = 1+z
+\end{equation} 
+to get:
+\begin{equation}
+d_p(t_{\rm ob}) = ct_0{\rm ln}(1+z)
+\end{equation} 
+\item Which means we can {\it easily} calculate a distance given a readily-measurable redshift.
+\item Finally, the relationship:
+\begin{equation}
+\frac{a_(t_{\rm ob})}{a(t_{\rm em})} = \frac{1}{1+z}
+\end{equation}    
+tells us that the distances between two points in the universe was a factor of $1+z$ {\it smaller} when the light was emitted (in this expanding universe), meaning we can readily calculate the distance between two points when the light was emitted:
+\begin{equation}
+    d_p(t_{\rm em}) = ct_0\frac{{\rm ln}(1+z)}{1+z}
+    \end{equation} 
+    
+\end{itemize}
+
 \end{document}
