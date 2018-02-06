@@ -1,0 +1,155 @@
+\documentclass[11pt]{article}
+\renewcommand{\baselinestretch}{1.05}
+\usepackage{amsmath,amsthm,verbatim,amssymb,amsfonts,amscd, graphicx}
+\usepackage{graphics}
+
+\topmargin0.0cm
+\headheight0.0cm
+\headsep0.0cm
+\oddsidemargin0.0cm
+\textheight23.0cm
+\textwidth16.5cm
+\footskip1.0cm
+\newcommand{\inchsign}{$^{\prime\prime}$}
+\newcommand{\vep}[1]{\ensuremath{\varepsilon#1}}
+\newcommand{\tem}{\ensuremath{t_{\rm em}}}
+\newcommand{\tob}{\ensuremath{t_{\rm ob}}}
+
+ \begin{document}
+ 
+\title{Lecture 06:\\Single-component model universes}
+\author{Dr. James Mullaney}
+\maketitle
+
+\section{Matter-only and Radiation-only universes}
+\begin{itemize}
+\item In the previous lecture, we solved the F.E. for our first model universe: an empty universe.
+\item An empty universe is the easiest to solve, but demonstrates how we use the F.E. to obtain an expression for the scale factor, $a(t)$, and then how we use that expression to determine proper distances.
+\item We will now turn to the next-easiest universes to solve: single component model universes.
+\item For now, we'll only consider flat (i.e., $\kappa=0$) universes, but you should at least be aware of what we'd need to solve for a non-flat model universe.
+\item For a flat universe, the F.E. becomes:
+\begin{equation}
+\left(\frac{\dot{a}}{a}\right)^2 = \frac{8\pi G}{3c^2}\vep{(t)}
+\end{equation}
+or:
+\begin{equation}
+\dot{a}^2 = \frac{8\pi G}{3c^2}\vep{(t)}a(t)^2
+\end{equation}
+\item From Lecture 5, we know that, from the Fluid Equation, we can write \vep\ in terms of a:
+\begin{equation}
+\vep{(a)} = \vep{_0}a(t)^{-3(1+\omega)}
+\end{equation}
+\item And substituting this into the F.E. gives:
+\begin{equation}
+    \dot{a}^2 = \frac{8\pi G}{3c^2}\vep{_0}a(t)^{-3(1+\omega)}a(t)^2
+\end{equation}    
+\item And since:
+\begin{equation}
+    a(t)^{-3(1+\omega)}a(t)^2 = a(t)^{-3(1+\omega)+2} = a(t)^{-3 - 3\omega + 2} = a(t)^{-1 - 3\omega}
+\end{equation}    
+we get:
+\begin{equation}
+\label{dota}
+    \dot{a}^2 = \frac{8\pi G}{3c^2}\vep{_0}a(t)^{(-1-3\omega)}
+\end{equation}
+\item To solve this, we'll take a guess that $a\propto t^q$, i.e., that the expression for $a(t)$ is some kind of power-law of $t$.
+\item In that case, the LHS of Eq. \ref{dota} becomes, via differentiation wrt. time:
+\begin{equation}
+(qt^{q-1})^2 = qt^{2q-2}
+\end{equation}
+\item And the RHS becomes:
+\begin{equation}
+\frac{8\pi G}{3c^2}\vep{_0}t^{(-1-3\omega)q}  
+\end{equation}
+giving:
+\begin{equation}
+    qt^{2q-2} = \frac{8\pi G}{3c^2}\vep{_0}t^{(-1-3\omega)q}  
+\end{equation}
+\item For this equation to {\it always} hold true, then the exponents of $t$ must be equal, i.e,:
+\begin{equation}
+    2q-2 = (-1-3\omega)q  
+\end{equation}
+\item Which we can rearrange to get $q$:
+\begin{equation}
+    q = \frac{2}{3+3\omega}  
+\end{equation}
+\item Substituting this into $a\propto t^q$ gives:
+\begin{equation}
+    a \propto t^{\frac{2}{3+3\omega}}  
+\end{equation}
+or,
+\begin{equation}
+    \label{aeq}
+    a = Ct^{\frac{2}{3+3\omega}}  
+\end{equation}
+\item We find the constant of proportionality, $C$, by using $a(t_0) = 1$:
+\begin{equation}
+    a(t_0) = Ct_0^{\frac{2}{3+3\omega}} = 1  
+\end{equation}
+so 
+\begin{equation}
+    C = t_0^{\frac{-2}{3+3\omega}}  
+\end{equation}
+and Eq. \ref{aeq} becomes:
+\begin{equation}
+    \label{aeq2}
+    a = t_0^{\frac{-2}{3+3\omega}}t^{\frac{2}{3+3\omega}} = \left(\frac{t}{t_0}\right)^{\frac{2}{3+3\omega}}
+\end{equation}
+\item $t_0$ is then found by substituting Eq. \ref{aeq2} back into the F.E., to give:
+\begin{equation}
+\label{t0}
+    t_0 = \frac{1}{1+\omega}\left(\frac{c^2}{6\pi G\vep{_0}}\right)^{1/2}
+\end{equation}
+{\bf it's a good idea for you to be able to demonstrate this yourself.}
+\end{itemize}
+\subsection{A proper distances}
+\begin{itemize}
+\item Now that we've got a general expression for $a(t)$, we can use it to obtain a general expression for proper distance. Recall:
+\begin{equation} 
+d_p(t_{\rm ob}) = c\int_{\tem}^{\tob}\frac{dt}{a(t)} = ct_0^{2/(3+3\omega)}\int_{\tem}^{\tob}\frac{dt}{t^{-2/(3+3\omega)}}
+\end{equation}
+\item To perform this integral, we'll define $m=-2/(3+3\omega)$:
+\begin{equation}
+d_p(t_{\rm ob}) = ct_0^{-m}\int_{\tem}^{\tob}t^m dt = \frac{ct_0^{-m}}{m+1}(\tob^{m+1} - \tem^{m+1})
+\end{equation}
+\item Taking \tob$=t_0$ (i.e., we're observing now), and taking a $t_0^{m+1}$ out of the bracket, we get: 
+\begin{equation}
+    d_p(t_{\rm ob}) = \frac{ct_0^{-m}}{m+1}t_0^{m+1}(1 - (\tem/t_0)^{m+1}) = \frac{ct_0}{m+1}(1 - (\tem/t_0)^{m+1})
+\end{equation}
+where
+\begin{equation}
+m+1 = \frac{-2}{3(1+\omega)} + 1 = \frac{-2 + 3 + 3\omega}{3(1+\omega)} = \frac{1+3\omega}{3(1+\omega)}
+\end{equation}
+giving:
+\begin{equation}
+    d_p(t_{\rm ob}) = ct_0\frac{3(1+\omega)}{1+3\omega}(1 - (\tem/t_0)^{(1+3\omega)/(3+3\omega)})
+\end{equation}    
+\item But, we don't typically know \tem. Instead, we measure redshift, $z$.
+\item We can use the relationship $1 + z = 1/a(\tem)$ to determine proper distance from redshift:
+\begin{equation}
+1+z = \frac{1}{a(\tem)} = \left(\frac{\tem}{t_0}\right)^{-2/(3+3\omega)} = \left(\frac{\tem}{t_0}\right)^m
+\end{equation}
+so
+\begin{equation}
+    \frac{\tem}{t_0} = (1+z)^{1/m}
+\end{equation}
+giving:
+\begin{equation}
+    d_p(t_{\rm ob}) = \frac{ct_0}{m+1}(1 - (1+z)^{(m+1)/m})
+\end{equation}
+or
+\begin{equation}
+    d_p(t_{\rm ob}) = ct_0\frac{3(1+\omega)}{1+3\omega}(1 - (1+z)^{(-1+3\omega)/2})
+\end{equation}
+and, using Eq. \ref{t0} to write $t_0$ in terms of $H_0$ (you should attempt to do this yourself, by using the $H_0$ version of the F.E.), we get:
+\begin{equation}
+    d_p(t_{\rm ob}) = \frac{c}{H_0}\frac{2}{1+3\omega}(1 - (1+z)^{(-1+3\omega)/2})
+\end{equation}
+
+\item Finally, the proper distance at the time of {\it emission} can be calculated by considering that - in an expanding universe - the universe was a factor of $1+z = 1/a(\tem)$ {\it smaller} when the light was emitted, giving:
+\begin{equation}
+    d_p(t_{\rm em}) = \frac{d_p(\tob)}{1+z}
+\end{equation}
+
+\end{itemize}
+\end{document}
