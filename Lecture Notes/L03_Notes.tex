@@ -21,13 +21,37 @@
 \section{The Robertson Walker metric}
 {\bf Slide 2}
 \begin{itemize}
+\item In the last lecture, we saw how:
+\begin{equation}
+    \label{dpt}
+    d_p(t_0) = a(t_0)\int_0^r dr = a(t_0)r = r
+\end{equation}
+\item But, how do we know $r$?
+\item We use the RW metric again. Over its travels through the universe from its emitting galaxy to us, a photon crosses a load of $dr$'s as $a(t)$ changes. Just as when relating redshift to $a(t)$, we can say:
+\begin{equation}
+    a(t)dr = cdt
+\end{equation}
+\item Giving:
+\begin{equation}
+    dr = \frac{cdt}{a(t)}
+\end{equation}
+\item Integrating the LHS between $0$ and $r$, corresponding to $t_{\rm em}$ to $t_{\rm ob}$ on the RHS gives:
+\begin{equation}
+    r = c\int_{t_{\rm em}}^{t_{\rm ob}}\frac{dt}{a(t)}
+\end{equation}
+\item Meaning (from Eq. \ref{dpt}):
+\begin{equation}
+    d_p(t_0) = c\int_{t_{\rm em}}^{t_{\rm ob}}\frac{dt}{a(t)}
+\end{equation}
+
+{\bf Slide 3}
 \item Saw in lecture 2 that an isotropic, homogeneous Universe can be fully described by just three numbers: $\kappa$, $R_0$, $a(t)$.
 \item $a(t)$ is paricularly important: it tells us how the Universe expands and contracts over time.
 \item $a(t)$ also enables us to relate redshifts (which are easily measured) to distances (which are much more difficult to measure).
 \item However, let's first focus on curvature, described by $\kappa$ and $R_0$.
 \end{itemize}
 \subsection{What is curvature in the context of a universe?}
-{\bf Slide 3}
+{\bf Slide 4}
 \begin{itemize}
 \item Curvature in a universe would manifest itself in terms of the perceived sizes of distant objects.
 \item The {\it perceived} size of an object is the angular size it subtends.
@@ -45,7 +69,8 @@
 \item The {\it Field Equation} links the two - it tells spacetime ($G_{\mu,\nu}$) how to curve in the presence of stress-energy ($T_{\mu, \nu}$).
 \item Unfortunately, both $G_{\mu,\nu}$ and $T_{\mu, \nu}$ are $4\times4$ tensors (i.e., matrices), and the equation as a whole represents ten non-linear second-order differential equations!
 \item Thus, in general, it can be extremely difficult to solve for $G_{\mu,\nu}$.
-{\bf Slide 5}
+
+{\bf Slide 6}
 \item However, on large scales, we can make some sweeping simplifications.
 \item On very large scales, we can ignore the ``clumpy'' nature of the Universe and instead describe it as being filled with a uniform (i.e., homogeneous), isotropic gas or pressure $P(t)$ and (energy) density $\varepsilon(t)$.
 \item In such a case, then $T_{\mu,\nu}$ only depents on $P(t)$ and $\varepsilon(t)$, and the metric is given by the Robertson Walker metric.
