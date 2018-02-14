@@ -11,6 +11,7 @@
 \textwidth16.5cm
 \footskip1.0cm
 \newcommand{\inchsign}{$^{\prime\prime}$}
+\newcommand{\vep}[1]{\ensuremath{\varepsilon#1}}
 
  \begin{document}
  
@@ -158,6 +159,24 @@ giving:
 P = \varepsilon\omega
 \end{equation}
 \item where $\omega$ is a fixed constant for a given type of energy.
+\item For a non-relativistic perfect gas, we have the perfect gas law:
+\begin{equation}
+P = \frac{nkT}{V} = \frac{\rho}{\mu}kT
+\end{equation}
+\item For such a gas, almost all its energy is in the form of mass, so $\vep=\rho c^2$, giving:
+\begin{equation}
+P = \frac{kT}{\mu c^2}\vep
+\end{equation}    
+\item And, also for a perfect gas, the temperature is given as:
+\begin{equation}
+kT = \mu \langle v^2 \rangle    
+\end{equation}    
+\item So:
+\begin{equation}
+    P = \frac{\langle v^2 \rangle}{3c^2} \vep    
+\end{equation}    
+\item Meaning $P = \omega \vep$, where $\omega=\langle v^2 \rangle/3c^2$.
+    
 \item For a non-relativitic gas, $\omega = \langle\frac{v^2}{3c^2}\rangle$, which is effectively 0.
 \item For a relativitic gas (e.g., of photons), $\omega = \frac{c^2}{3c^2} = 1/3$.
 \item And for a Dark Energy, we effectively get a negative pressure, meaning $\omega<-1/3$
