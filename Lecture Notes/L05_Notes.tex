@@ -23,7 +23,7 @@ Our first model universe}
 \begin{itemize}
 \item The Friedmann Equation (F.E.) gives us the means to determine how, given a set energy densities, the scale factor changes over the history (and future) of the universe:
 \begin{equation}
-H^2 = \left(\frac{\dot{a}}{a}\right)^2 = \frac{8\pi G}{3c^2}\vep{(t)} - \frac{\kappa c^2}{R_0}\frac{1}{a(t)}
+H^2 = \left(\frac{\dot{a}}{a}\right)^2 = \frac{8\pi G}{3c^2}\vep{(t)} - \frac{\kappa c^2}{R_0^2}\frac{1}{a(t)}
 \end{equation}
 \item Since the scale factor quite literally describes the expansion and contraction of the universe, the F.E. provides the means to work out the dynamic evolution of the universe.
 \item What we now need to do is solve the F.E. to obtain an expression for $a(t)$ for a given set of energy densities.
@@ -106,7 +106,7 @@ A universe containing nothing!}
 \item In this case $\vep(t)=0$, meaning the F.E. is:
 \begin{equation}
 \label{fracdot}
-    \frac{\dot{a}}{a} = \sqrt{\frac{-\kappa c^2}{R_0}\frac{1}{a^2}}
+    \frac{\dot{a}}{a} = \sqrt{\frac{-\kappa c^2}{R_0^2}\frac{1}{a^2}}
 \end{equation}
 \item Clearly, the flat, $\kappa=0$ solution is trivial, with a solution of $\dot{a}=0$. This would be an entirely static, infinite-age universe, neither expanding nor contracting.
 \item But, more interestingly are the non-flat empty universes, where $\kappa\ne0$.
@@ -158,7 +158,7 @@ d_p(t_{\rm ob}) = ct_0{\rm ln}(1+z)
 \item Which means we can {\it easily} calculate a distance given a readily-measurable redshift.
 \item Finally, the relationship:
 \begin{equation}
-\frac{a_(t_{\rm ob})}{a(t_{\rm em})} = \frac{1}{1+z}
+\frac{a(t_{\rm ob})}{a(t_{\rm em})} = \frac{1}{1+z}
 \end{equation}    
 tells us that the distances between two points in the universe was a factor of $1+z$ {\it smaller} when the light was emitted (in this expanding universe), meaning we can readily calculate the distance between two points when the light was emitted:
 \begin{equation}
