@@ -2,6 +2,7 @@
 \renewcommand{\baselinestretch}{1.05}
 \usepackage{amsmath,amsthm,verbatim,amssymb,amsfonts,amscd, graphicx}
 \usepackage{graphics}
+\usepackage{bigints}
 
 \topmargin0.0cm
 \headheight0.0cm
@@ -26,17 +27,47 @@
 \begin{equation}
     \varepsilon{_{\rm tot}} = \varepsilon{_{\rm R}}+\varepsilon{_{\rm M}}+\varepsilon{_{\rm D}}
 \end{equation}
+
+\item Which means the F.E. for the real Universe becomes:
+\begin{equation}
+    \left(\frac{\dot{a}}{a}\right)^2 = \frac{8\pi G}{3c^2}\sum_i\varepsilon{_i}-\frac{\kappa c^2}{R_0^2a(t)^2}
+\end{equation}
+    
+
 \item From this, and by using the relationships derived in previous lectures:
 \begin{align}
-\varepsilon{_0,c}&=\frac{3H_0^2c^2}{8\pi G}\\
-\Omega_{i,0}&=\frac{\varepsilon{_i,0}}{\varepsilon{_c,0}}\\
-H_0^2(1-\Omega_0)&= \frac{-\kappa c^2}{R_0^2}\\
-\varepsilon{(a)}&=\varepsilon{_0}a^{-3(1+\omega)}\\
+    H &= \left(\frac{\dot{a}}{a}\right)\\
+    \Omega_{i,0}&=\frac{\varepsilon{_{i,0}}}{\varepsilon{_{c,0}}}\\
+    \varepsilon{_{0,c}}&=\frac{3H_0^2c^2}{8\pi G}\\
+    H_0^2(1-\Omega_0)&= \frac{-\kappa c^2}{R_0^2}\\
+    \varepsilon{(a)_i}&=\varepsilon{_{i,0}}a^{-3(1+\omega)}
 \end{align}
 we get:
 \begin{equation}
-\left(\frac{H}{H_0}\right)^2=\Omega
+\left(\frac{H}{H_0}\right)^2=\frac{\Omega_{\rm p, 0}}{a^4}+\frac{\Omega_{\rm m, 0}}{a^3} + \Omega_{\rm d, 0} + \frac{1-\Omega_0}{a^2}
 \end{equation}
+\item meaning:
+\begin{equation}
+    \frac{da}{dt}=H_0\left(\frac{\Omega_{\rm p, 0}}{a^2}+\frac{\Omega_{\rm m, 0}}{a} + \Omega_{\rm d, 0}a^2 + 1-\Omega_0\right)^{1/2}
+\end{equation}
+\item So, to obtain $a(t)$, we need to solve the following:
+\begin{equation}
+        \bigints_0^a{\frac{da}{\left(\frac{\Omega_{\rm p, 0}}{a^2}+\frac{\Omega_{\rm m, 0}}{a} + \Omega_{\rm d, 0}a^2 + 1-\Omega_0\right)^{1/2}}} = H_0t
+\end{equation}
+\item For the real Universe:
+\begin{align}
+\Omega_{p,0}&=9\times10^{-5}\\
+\Omega_{m,0}&=0.31\\
+\Omega_{d,0}&=0.69\\
+\Omega_{0}&=1.00\\
+H_0 &= 67.7~{\rm km~s^{-1}~Mpc}
+\end{align}
+\item Unfortunately, this cannot be solved analytically, so instead we solve it numerically using computers to integrate ``under the curve''.
+\item See notes on lecture slides...
 \end{itemize}
 
+\section{Luminosity Distance}
+\begin{equation}
+    d_L = \left(\frac{L}{4\pi F}\right)^{1/2}
+\end{equation}
 \end{document}
