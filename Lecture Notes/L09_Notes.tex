@@ -69,5 +69,49 @@ T_{\rm rec} = \frac{13.6}{2.7k}=\frac{13.6}{2.7\times8.6\times10^{-5}}\sim60,000
 which occured when $a=2.7/60000=4.5\times10^{-5}$, or $z\sim22,000$.
 \item However, it turns out this is a poor guess.
 \item The reason being that, with 1.6 billion photons per baryon, the Universe doesn't need roughly {\it half} the CMB to be able to ionise H, it needs a much smaller fraction.
+\item Instead, we can use the Saha Equation to determine the fraction of ionised atoms:
+\begin{equation}
+\label{nh1}
+    \frac{n_H}{n_pn_e} = \left(\frac{m_ekT}{2\pi\hbar^2}\right)^{-3/2}{\rm exp}\left(\frac{Q}{kT}\right)
+\end{equation}
+\item Firstly, we'll simplify things by assuming that the gas is 100\%\ Hydrogen.
+\item We'll then define a quantity $X$ as the fraction of all the gas that is ionised:
+\begin{equation}
+    \label{nh2}
+    X = \frac{n_p}{n_p + n_H}
+\end{equation}
+\item Which we can rearrange to get:
+\begin{equation}
+    n_H = \frac{1-X}{X}n_p
+\end{equation}
+\item Using the fact that $n_e=n_p$, and subbing Eq. \ref{nh1} into Eq. \ref{nh2} we get:
+\begin{equation}
+    \label{1mx}
+    \frac{1-X}{X} = n_p\left(\frac{m_ekT}{2\pi\hbar^2}\right)^{-3/2}{\rm exp}\left(\frac{Q}{kT}\right)
+\end{equation}
+\item But we need to relate this to the photons that are maintaining the gas at temperature, $T$.
+\item We do this by resorting to the fact that we know what the ratio of the number of baryons to photons is (was and will be), as highlighted at the start of the lecture. We'll call this ratio $\eta$:
+\begin{equation}
+    \label{eta}
+    \eta = \frac{n_{\rm bary}}{n_\gamma} = \frac{n_p+n_H}{n_\gamma} = \frac{n_p}{Xn_\gamma}
+\end{equation}
+\item And that, since we're dealing with a black body, we {\it know} the number density of photons by integrating over the black body equation to give:
+\begin{equation}
+    n_\gamma = 0.2436\left(\frac{k T}{\hbar c}\right)^3
+\end{equation}
+\item which we can combine with Eq. \ref{eta} to give:
+\begin{equation}
+    \label{np}
+    n_p = 0.2436X\eta\left(\frac{k T}{\hbar c}\right)^3
+\end{equation}
+\item This gives the number density of ionised Hydrogen atoms ($n_p$) given the ratio of baryons to photons ($\eta$, which we know), the temperature of the black body, $T$ (which we're trying to obtain), and the ratio of ionised to neutral gas $X$ (which we'll define as $1/2$ for the moment of recombination).
+\item In other words, we've replaced $n_p+n_H$ with an expression that comes solely from considering the photons follow a black body distribution.
+\item Inserting the expression for $n_p$ (Eq. \ref{np}) into Eq. \ref{1mx} and using the known quantities for some of the constants, we get:
+\begin{equation}
+\frac{1-X}{X^2} = 3.84\eta\left(\frac{kT}{m_ec^2}\right)^{3/2}{\rm exp}\left(\frac{Q}{kT}\right)
+\end{equation}
+\item Since $T$ is the only unknown in this equation, it can be solved. The easiest way to do this, however, is graphically (see lecture slides).
+
 \end{itemize}
+
 \end{document}
