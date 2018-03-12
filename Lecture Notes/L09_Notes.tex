@@ -1,0 +1,73 @@
+\documentclass[11pt]{article}
+\renewcommand{\baselinestretch}{1.05}
+\usepackage{amsmath,amsthm,verbatim,amssymb,amsfonts,amscd, graphicx}
+\usepackage{graphics}
+
+\topmargin0.0cm
+\headheight0.0cm
+\headsep0.0cm
+\oddsidemargin0.0cm
+\textheight23.0cm
+\textwidth16.5cm
+\footskip1.0cm
+\newcommand{\inchsign}{$^{\prime\prime}$}
+\newcommand{\vep}[1]{\ensuremath{\varepsilon#1}}
+
+ \begin{document}
+ 
+\title{Lecture 09:\\The radiation content of the Universe:\\The Cosmic Microwave Background Part 1}
+\author{Dr. James Mullaney}
+\maketitle
+
+\section{The radiation content of the Universe}
+\begin{itemize}
+\item Galaxy surveys tell us that the density of stars in the Universe corresponds to about $1.7~{\rm L\odot~Mpc^{-3}}$.
+\item If, as an upper limit, we assume that these stars have emitted photons since the beginning of the Universe, $4.5\times10^{17}~{\rm s}$ ago, it corresponds to an energy density arising from stellar photons of: $10^{15}~{\rm J m^{-3}}$.
+\item The other main source of photons in the Universe is the CMB.
+\item The spectrum of the CMB is a black body of $T=2.7~K$, so we can calculate its energy density using:
+\begin{equation}
+E = \alpha T^4
+\end{equation}
+where
+\begin{equation}
+\alpha=\frac{\pi^2}{15}\frac{k^4}{\hbar^3 c^3}=7.566\times10^{-16}~{\rm J~m^{-3}~K^{-4}}=0.2606~{\rm MeV~m^{-3}}
+\end{equation}
+and $k$ is the Boltzmann constant.
+\item So the energy density of the CMB is {\it at least} a factor of 40 times that of stellar photons.
+\item Despite this, the energy density of the CMB still represents only a small fraction of the critical density of our Universe (i.e., $\Omega_{\rm p} = 5.35\times10^{-5}$).
+\item However, because the energy of each CMB photon is very low, $hf_{\rm mean}=6.34\times10^{-4}~{\rm eV}$, the number density of CMB photons (i.e., the number of photons per unit volume) is very high:
+\begin{equation}
+n_{\rm p} = \frac{0.2606\times10^6}{6.34\times10^{-4}}=4.107\times10^8~{\rm m^{-3}}
+\end{equation}
+\item Indeed, compared to the number density of Baryons:
+\begin{equation}
+    n_{\rm b} = \frac{\Omega_{\rm b,0}\vep{_{c,0}}}{E_{\rm b}}=\frac{0.048\times4890~{\rm MeV~m^{-3}}}{939~{\rm MeV}} = 0.25~{\rm m^{-3}}
+\end{equation}
+\end{itemize}
+
+\section{Recombination}
+\begin{itemize}
+\item In an expanding universe, such as our own, as we go further back in time the scale factor, $a$, gets smaller and smaller.
+\item This, in turn, means that the wavelength of CMB photons get shorter and shorter, meaning their energies get higher and higher.
+\item Since the mean energy, $E$, of a CMB photon is related to temperature, $T$, via $E=2.7kT$ (where $k$ is the Boltzman constant), we can calculate the temperature of the Universe as a function of $a$:
+\begin{equation}
+    hf_{\rm mean}=\frac{hc}{\lambda_{\rm mean}}=\frac{hc}{a\lambda_0} = 2.7kT(a)
+\end{equation}
+or, equivalently, $T(a) = T_0/a$, where $T_0$ is the temperature of the CMB today (i.e., 2.755\ K).
+\item If we go far enough back in time, then the energies of a large proportion of CMB photons exceed that of the ionisation energy of Hydrogen.
+\item And since there are 1.6 billion CMB photons for every Baryon, the instant an electron binds to a proton to form a Hydrogen atom, it gets blasted apart by an ionising photon.
+\item However, as the Universe expands, the photons and electrons move further away from each other, so they interact less.
+\item If nothing were to change, the distance between the photons and electrons would become so large that they would eventually stop interacting.
+\item Before that happens, however, we get recombination.
+\item As the Universe expands, the energy of the CMB photons drops as their wavelengths increase.
+\item Recombination occurs when there are insufficient numbers of photons with energy greater than the ionisation energy of Hydrogen to keep it ionised.
+\item When does this occur?
+\item One guess would be when the mean energy per photon drops below the ionisation energy of Hydrogen. With the mean photon energy given by $2.7kT$, this corresponds to:
+\begin{equation}
+T_{\rm rec} = \frac{13.6}{2.7k}=\frac{13.6}{2.7\times8.6\times10^{-5}}\sim60,000~{\rm K}
+\end{equation}
+which occured when $a=2.7/60000=4.5\times10^{-5}$, or $z\sim22,000$.
+\item However, it turns out this is a poor guess.
+\item The reason being that, with 1.6 billion photons per baryon, the Universe doesn't need roughly {\it half} the CMB to be able to ionise H, it needs a much smaller fraction.
+\end{itemize}
+\end{document}
